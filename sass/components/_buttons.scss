@@ -1,0 +1,21 @@
+.btn {
+    @include police-Roboto;
+    vertical-align:middle;
+    margin: 15px 15%;
+    font-weight: 700;
+    font-size: 20px;
+    line-height:45px;
+    height:52px;
+    color:white; 
+    background-color:$rose ;
+    background-color:$violet;
+    background: linear-gradient(to bottom right,#FF79DA, #9356DC);
+    border-left:none;
+    border-radius: 20px;
+    box-shadow: 0 3px 15px 0 #9356DC;
+    transition: 0.3s;
+    &:hover{
+        background: linear-gradient(to bottom right,lighten(#FF79DA,7%),lighten(#9356DC,7%));
+        box-shadow: 0 6px 15px 0 #9356DC;
+    }
+}

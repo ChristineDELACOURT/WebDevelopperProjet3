@@ -1,0 +1,35 @@
+@mixin police-Roboto{
+    color:$noir;
+    font-family:'Roboto';
+    font-style:normal;
+    text-align:center;
+}
+@mixin font-face($liste-font-family){
+    @each $font-family in $liste-font-family{
+  @font-face{
+    font-family: $font-family;
+    src: url('../font/' + $font-family + '/' + $font-family + '-Regular' + '.ttf') format('truetype');
+  }
+  }
+}
+@mixin flexbox{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-content:space-around;
+    width:100%;
+    gap:20px;
+}
+@mixin desktop{
+    @media screen and (min-width:992px){
+        @content;
+    }
+}
+@mixin tablette{
+    @media screen and (min-width:768px) and (max-width:992px){
+        @content;
+    }
+}
+
+    
+    

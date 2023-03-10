@@ -1,0 +1,278 @@
+/* css du projet Ohmyfood P3 Web Developper 
+Christine Delacourt 10/01/2023 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.conteneur-main{
+    max-width:768px; /* largeur maximale d un mobile */
+    padding:0 3.75vw;
+}
+@font-face{
+    font-family:'Roboto';
+    src: url('../font/Roboto/Roboto-Regular.ttf') format('truetype');
+}
+@font-face{
+    font-family:'Shrikhand';
+    src: url('../font/Shrikhand/Shrikhand-Regular.ttf') format('truetype');
+}
+body{
+    font-size:100%;
+}
+/* HEADER */
+.barre-de-navigation{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+}
+.barre-de-navigation img{ /* Logo Ohmyfood */
+    width:50%;
+    padding:20px 0px 0px 0px;
+}
+/* TEXTES */
+h1, h2, h3, h4 ,p{
+    color:black;
+    font-family:'Roboto';
+    font-style:normal;
+}
+h1{
+    text-align: center;
+    font-weight:700;
+    font-size: 24px;
+    line-height: 26px;
+    margin: 15px 18%;
+}
+h2{
+    text-align:center;
+    vertical-align:middle;
+    text-decoration:none;
+    margin: 15px 15%;
+    font-family:'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height:49px;
+    height:52px;
+    color:white; 
+    background-color:#FF79DA ;
+    background-color:#9356DC;
+    background: linear-gradient(to bottom right,#FF79DA, #9356DC);
+    border-left:none;
+    border-radius: 20px;
+    box-shadow: 0 3px 15px 0 #9356DC;
+    transition: 0.3s;
+}
+h3{
+    color:gray;
+    font-weight:400;
+    font-size:18px;
+    line-height:21px;
+    text-align:center;
+    vertical-align:middle;
+    margin: 15px 5%;
+}
+h4{
+    font-weight:700;
+    font-size:16px;
+    line-height:19px;
+    top: calc(50% - 15px/2 + 36px);
+}
+/* VILLE */
+.ville{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    width:100%;
+    height:49px;
+    background-color:#F2F2F2;
+    margin-top:20px;
+}
+.fa-location-dot{
+    width: 14px;
+    height: 18px;
+    background-color:#F2F2F2;
+    padding :16px 15px 14px 18px;  
+}
+.ville-input{
+    font-family:'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height:21px;
+    text-align:left;
+    padding-left:16%;
+    width: 84%;
+    height: 46px;
+    color:black; 
+    background-color:#F2F2F2;
+    border-top:1px #F2F2F2 solid;
+    border-left:none;
+    border-bottom:1px #F2F2F2 solid;
+    border-right:none;
+}
+/* FONCTIONNEMENT */
+.fonctionnement{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-content:space-around;
+    width:100%;
+    margin-top:20px;
+    aspect-ratio:1.5;
+}
+.fonctionnement h1{
+    text-align: left;
+    margin: 0;
+}
+ul{
+    display:flex;
+    flex-direction:column;
+    list-style-type:none;
+    justify-content:space-around;
+    align-content:space-around;
+    width:100%;
+    aspect-ratio:2;
+}
+li {
+    display:block;
+    justify-items: center;
+    align-items: center;
+    font-family:'Roboto';
+    font-style:normal;
+    font-weight:700;
+    font-size:17px;
+    line-height:21px;
+    width:100%;
+    color:black;
+    background-color:#F2F2F2;
+    text-decoration: none;
+    border-radius:20px;
+    box-shadow: 0 3px 5px 0 gray;
+    transition: 0.3s;
+}
+.fa-mobile,.fa-list,.fa-store{   
+    width:52px;
+    height:52px;
+    text-align:center;
+    vertical-align:middle;
+    padding:15px;
+    color:gray;
+}
+p{
+    font-weight:400;
+    font-size:14px;
+    line-height:20px;
+    padding-top:3px;
+}
+.restaurants{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-content:space-around;
+    width:100%;
+    aspect-ratio: 0.3;
+    border-radius:20px;
+    background-color:#F2F2F2;
+    gap:30px;
+}
+.titre-section-restaurants{
+    padding:22px 0px 0px 0px;
+}
+.titre-section-restaurants h1{
+    text-align: left;
+    margin: 0;
+}
+.carte-restaurants{
+    display:flex;
+    box-sizing:border-box;
+    flex-direction:column;
+    justify-content:space-around;
+    width:100%;
+    background-color:white;
+    border-radius:20px;
+    box-shadow: 0 3px 15px 0 rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+.carte-restaurants a{  
+    text-decoration-line:none;
+}
+.carte-restaurants img{
+    box-sizing:border-box;
+    width:100%;
+    aspect-ratio: 2;
+    border: 5px white solid;
+    border-top-right-radius:20px;
+    border-top-left-radius: 20px;
+    object-fit:cover;
+}
+.texte-carte-restaurants{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:0px 16px;
+    font-size:12px;
+}
+.coeur{
+    display:flex;
+    width:15px;
+    height:15px;     
+}
+.fa-heart, .coeur{
+    width:15px;
+    height:15px; 
+    color:gray;
+    transform:scale(1.414);
+    font-weight:lighter; 
+    background: transparent; 
+    position: relative;
+    overflow:hidden;
+   z-index:0; 
+}
+.coeur::before {  
+    content:' ';
+    position: absolute;
+    top:15px;   
+    width:15px;
+    height:15px; 
+    background-color:red;
+    transition:top 10s;
+    z-index:-1;
+}
+.coeur:hover::before {   
+    top:0px;
+    color:transparent;
+}
+footer{
+    width:100%;
+    background-color: gray;
+    margin-top:20px;
+}
+.container-footer{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    padding: 30px 70px 30px 70px;
+    margin:0 auto;
+}
+.container-footer h3{
+    text-align: left;
+    padding-bottom: 8px;
+    font-family:'Shrikhand';
+    color:white;
+}
+.container-footer a{
+    display:block;
+    color:white;
+    padding-top:12px;
+    text-decoration-line:none;
+    font-family:'Roboto';
+    font-style:normal;
+    font-weight:500;
+    font-size:4vw;
+    line-height:5vw;
+    text-align:left;
+}
+.container-footer .fa-solid {
+    padding-right:12px;    
+}

@@ -1,0 +1,9 @@
+header {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    & img {
+        width:200px;
+    padding:20px 0px 0px 0px;
+    }
+}

@@ -1,0 +1,73 @@
+h1{
+    @include police-Roboto;
+    font-weight:700;
+    font-size: 24px;
+    line-height: 26px;
+    margin: 15px 18%;
+}
+h2{
+    @include police-Roboto;
+    vertical-align:middle;
+    margin: 15px 15%;
+    font-weight: 700;
+    font-size: 20px;
+    line-height:49px;
+    height:52px;
+    color:white; 
+    background-color:#FF79DA ;
+    background-color:#9356DC;
+    background: linear-gradient(to bottom right,#FF79DA, #9356DC);
+    border-left:none;
+    border-radius: 20px;
+    box-shadow: 0 3px 15px 0 #9356DC;
+    transition: 0.3s;
+}
+h3{
+    @include police-Roboto;
+    color:gray;
+    font-weight:400;
+    font-size:18px;
+    line-height:21px;
+    vertical-align:middle;
+    margin: 15px 5%;
+}
+h4{
+    @include police-Roboto;
+    font-weight:700;
+    font-size:16px;
+    line-height:24px;
+    top: 5px;
+}
+.texte{
+    @include police-Roboto;
+    text-align: left;
+    font-weight:400;
+    font-size:14px;
+    line-height:20px;
+    padding-top:3px;
+}
+.nom-restaurant h3{
+    color:$noir;
+    text-align: left;
+    font-size:24px;
+    font-family:'Shrikhand';
+    margin-left: 0;
+    margin-right: 0;border: none;
+}
+li h4 {
+    color: $noir;
+    font-weight:700;
+    line-height:24px;
+    text-align: left;
+    border: none;
+    width: auto;
+}
+.blockprix h4 {
+    color: $noir;
+    font-weight:700;
+    line-height:24px;
+    width:40px;
+    text-align: center;
+    padding-top:32px;
+    border:none;
+}

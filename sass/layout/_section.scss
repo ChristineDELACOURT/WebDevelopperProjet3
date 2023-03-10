@@ -1,0 +1,404 @@
+.spinner{
+@include flexbox;
+flex-direction: row;
+position:absolute;
+            top:0;
+            bottom: 0;
+            left:0;
+            right: 0;
+            z-index:0;
+            animation:disparition 0s 2800ms forwards;
+}
+@keyframes disparition{
+    0% {
+        transform:scaleX(1);
+    }
+    99%{
+        transform:scaleX(1);
+    }
+    100% {
+        transform:scaleX(0);
+    }
+}
+.lettre{
+    @for $i from 1 through 9 {
+        &--#{$i} {
+            @include police-Roboto;
+            color:$blanc;
+            width:9vh;
+            height:9vh;
+            padding: 3vh;
+            font-size: 3vh;
+            font-weight:900;
+            position:absolute;
+            top:47.5vh * $i - (4.75vh * $i * $i) - 33.25vh;
+            left:9.90625vw * $i - (0.015625vw * $i * $i) - 4.890625vw;       
+/*            animation: spin 1000ms backwards infinite ease-in-out alternate;*/
+            animation: spin 300ms backwards ease-in-out 1;
+            animation-delay: 300ms * ($i - 1);
+            background-color:nth($color_,$i);
+        }
+    }
+}
+@keyframes spin{
+    0% {
+        transform:rotate(0deg);
+        opacity:0;
+    }
+    100% {
+        transform:rotate(360deg);
+        opacity:1;
+    }
+}
+.fonctionnement{
+    @include flexbox;
+    margin-top:20px;
+    @include desktop{
+        aspect-ratio:unset;
+    }
+    & h1{
+    text-align: left;
+    margin:0;
+    @include tablette{
+        text-align: center;
+    }  
+    @include desktop{
+        text-align: center;
+    }  
+    }
+}
+.fonctionnement ul{
+    list-style:none;
+    @include flexbox;
+    margin: 8px;
+    justify-items: center;
+    align-items: center;
+    @include tablette{
+        flex-direction:row; 
+        justify-content: space-between;
+    }  
+    @include desktop{
+        flex-direction:row; 
+        justify-content: space-between;
+    }  
+}
+.fonctionnement ul li {
+    display:block;
+    justify-items:center;
+    align-items: center;
+    @include police-Roboto;
+    text-align: left;
+    font-weight:700;
+    font-size:17px;
+    line-height:21px;
+    width:98%;
+    @include tablette{
+        width:32%;
+        font-size:15px;
+    }
+    @include desktop{
+        width:30%;
+    }
+    background-color:#F2F2F2;
+    border-radius:20px;
+    box-shadow: 0 3px 5px 0 gray;
+    transition: 0.3s;
+}
+ul img{
+    display:inline;
+    vertical-align: middle;
+    position:relative;
+    left:-10px;
+    width:20px;
+    height:20px;
+}
+.fa-mobile,.fa-list,.fa-store{   
+    width:52px;
+    height:52px;
+    text-align:center;
+    vertical-align:middle;
+    padding:15px;
+    color:$gris;
+    @include tablette{
+        width:22px;
+        position:relative;
+        left:-10px;
+        padding:15px 0px 15px 0px;
+    }
+}
+.restaurants{
+    @include flexbox;
+    border-radius:20px;
+    background-color:#F2F2F2;
+    gap:30px;
+    margin-top: 20px;
+    padding-bottom: 30px;
+    @include desktop{
+        flex-direction:row; 
+        flex-wrap:wrap;
+        aspect-ratio:unset;
+    }
+    @include tablette{
+        flex-direction:row; 
+        flex-wrap:wrap;
+        width:100%;
+        aspect-ratio:unset;
+    } 
+    & h1{
+        width:100%;
+        text-align: left;
+        margin:20px 0 0 0;
+    } 
+}
+.carte-restaurants{
+    @include flexbox;
+    background-color:white;
+    border-radius:20px;
+    box-shadow: 0 3px 15px 0 rgba(0,0,0,0.1);
+    transition: 0.3s;
+    @include desktop{
+        width:22%;
+    }
+    @include tablette{
+        flex-direction:row; 
+        flex-wrap:wrap;
+        width:45%;
+    }
+}
+.carte-restaurants img{
+    box-sizing:border-box;
+    width:100%;
+    aspect-ratio: 2;
+    border: 5px white solid;
+    border-top-right-radius:20px;
+    border-top-left-radius: 20px;
+    object-fit:cover;
+}
+.texte-carte-restaurants{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:0px 16px;
+    font-size:12px;
+}
+.coeur{
+    width:20px; 
+    height:20px; 
+    z-index:0;
+}
+.carre{
+    background-color:$blanc;
+    width:20px; 
+    height:20px; 
+    position:relative;
+    top:-20px;
+    left:0;
+    z-index:0;
+    transform:scaleY(1);
+    transform-origin:top;
+    transition:transform 3000ms ease-in-out;
+}
+.nom-restaurant .coeur .carre{
+    background-color:#F2F2F2;
+    top:-20px;
+}
+.fa-regular,.fa-heart{
+    display:block;
+    font-size:20px;
+    color:gray;  
+    width:20px; 
+    height:20px; 
+    position:relative;
+    top:0;
+    left:0; 
+    z-index:2;      
+    &:active,&:hover{
+            color:$rouge;   
+            font-weight:bolder; 
+            z-index:1;
+            }
+    &:active,&:hover + .carre{
+            z-index:2;
+            transform:scaleY(0);
+            }        
+        }
+.fa-arrow-left{
+    width:auto;
+    color:$noir;
+    transform:scale(1.414);
+    padding: 20px 0 0 0;
+}
+.carte-menu {
+    @include flexbox;
+    background-color: #F2F2F2;
+    margin-top: 20px;
+}
+.restaurant{
+    @include flexbox;
+    justify-content: flex-start;
+    gap:unset;
+    margin-bottom: -50px;
+}
+.restaurant img {
+    width:100%;
+    max-height:200px;
+    padding:0px 0px 0px 0px;
+    object-fit:cover;
+}
+.nom-restaurant{
+    @include flexbox;
+    flex-direction: row;
+    align-items: center;
+    height: 100px;
+    gap:30%;
+    position: relative;
+    top: -50px;
+    background-color: #F2F2F2;
+    border-top-right-radius:50px;
+    border-top-left-radius: 50px;
+}
+.liste-menu{
+    @include flexbox;
+    padding:0 3% 0 3%;
+    justify-content:center;
+    align-items:flex-start;
+    gap:10px;
+    animation:delais 5s ease-in-out;
+    @include tablette{
+        flex-direction: row;
+        flex-wrap:wrap;
+    }  
+    @include desktop{
+        flex-direction: row;
+    }  
+}
+.menu{   
+    width:100%;
+    height: 235px;
+    gap:10px;
+    @include tablette{
+        width:48%;
+    }  
+    @include desktop{
+        width:32%;
+    }  
+}
+.partie-repas{
+    color:$gris;
+    align-self: self-start; 
+    font-weight: 400;
+    border-bottom: 3px solid $cyan;
+    width : 40px;  
+}
+.menu ul{
+    @include flexbox;   
+    gap:10px;
+}
+.liste-entrees{
+    @include flexbox;
+    margin-top:20px;
+
+}
+.liste-entrees li {
+    @include flexbox;
+    overflow: hidden;
+    justify-content:space-around;
+    display:block;
+    height: 58px;
+    align-items: left;
+    background-color:$blanc;
+    padding: 5px 15px 5px 15px;
+    border-radius:15px;
+    box-shadow: 0 3px 5px 0 gray;
+    transition:box-shadow 0.3s;   
+    &:hover .blockprix{
+        transform:translate(-60px);
+    }
+    &:hover .texte{
+        width:calc(100% - 100px);
+    }
+    &:hover .fa-check{
+        transform:rotate(-360deg);
+    }
+}
+.liste{
+    @for $i from 1 through 4 {
+        &--#{$i} {
+        @include flexbox;
+        flex-direction:row;
+        justify-content:flex-start;
+        width:100%;
+        flex-wrap:nowrap;
+        height:24px;
+        gap:0px;
+        color:$blanc;    
+        animation:delai 330ms backwards ease-in-out 1;
+        animation-delay: 1000ms * $i;
+        }
+    }
+}
+/* apparition progressive du menu */
+@keyframes delai{
+    0% {
+        opacity:0;
+        transform:translateY(15%);
+    }
+    50%{
+        opacity:0.3;
+    }
+    100% {
+        opacity:1;
+        transform:translateY(0%);
+    }
+}
+.prix{
+    width: 100%;
+    height: 24px;
+}
+.blockprix{
+    @include flexbox;
+    flex-direction:row;
+    justify-content:flex-start;
+    position:relative;
+    top:-55px;
+    right:calc(25px - 100%);
+    width:100px;
+    height:60px;
+    gap:0px;
+    font-size:unset;
+    transform:translate(0);
+    transform-origin:right;
+    transition:transform 3000ms ease-in-out;
+}
+.liste-entrees li .texte{
+    color: $noir;
+    font-size:16px;
+    font-weight:500;
+    height:24px;
+    width:calc(100% - 40px);
+    position:relative;
+    text-align: left;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    transform-origin:right;
+    transition:width 3000ms ease-in-out;
+}
+.coche{
+    display:block;
+    background-color:$cyan;
+    width:60px;
+    height:60px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.fa-check{
+    margin:20px;
+    width: 20px;
+    height: 20px;
+    color:$cyan;
+    border-radius: 15px;
+    background-color:$blanc;
+    transform:rotate(0deg);
+    transition:transform 3000ms ease-in-out;
+}

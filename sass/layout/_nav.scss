@@ -1,0 +1,28 @@
+nav {
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    padding: 30px 70px 30px 70px;
+    margin:0 auto;
+    & h3 {
+        text-align: left;
+        padding-bottom: 8px;
+        font-family:'Shrikhand';
+        color:$blanc;
+    }
+    & a{
+        @include police-Roboto;
+        display:block;
+        color:$blanc;
+        padding-top:12px;
+        text-decoration:none;
+        font-style:normal;
+        font-weight:500;
+        font-size:4vw;
+        line-height:5vw;
+        text-align:left;
+    }
+    & .fa-solid {
+        padding-right:12px;    
+    }   
+}

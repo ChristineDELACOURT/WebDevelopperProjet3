@@ -1,0 +1,38 @@
+.conteneur-main{
+    max-width:768px; /* largeur maximale d un mobile */
+    position:absolute;
+            top:0;
+            bottom: 0;
+            left:0;
+            right: 0;
+            padding:0 3.75vw;
+    z-index:1;
+    animation:apparition 0s 2800ms backwards;
+    @include tablette{
+        max-width:100%; 
+    }@include desktop{
+        max-width:100%; 
+    }   
+}
+@keyframes apparition{
+    0% {
+        transform:translateY(-1000px);
+    }
+    100% {
+        transform:translateY(0);
+    }
+}
+.conteneur-main-details{
+    max-width:768px; /* largeur maximale d un mobile */
+    position:absolute;
+            top:0;
+            bottom: 0;
+            left:0;
+            right: 0;
+            padding:0 3.75vw;
+    @include tablette{
+        max-width:100%; 
+    }@include desktop{
+        max-width:100%; 
+    }   
+}
