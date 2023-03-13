@@ -9,13 +9,13 @@
       },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gerkx/maintainable-css-with-sass.git"
+    "url": "git+https://github.com/ChristineDELACOURT/WebDevelopperProjet3"
   },
   "author": "gerkx",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gerkx/maintainable-css-with-sass/issues"
+    "url": "https://github.com/ChristineDELACOURT/WebDevelopperProjet3/issues"
   },
   "browserslist": "last 4 versions",
-  "homepage": "https://github.com/gerkx/maintainable-css-with-sass#readme"
+  "homepage": "https://github.com/ChristineDELACOURT/WebDevelopperProjet3#readme"
 }
