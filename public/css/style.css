@@ -817,7 +817,7 @@ ul img {
   justify-content: space-around;
   display: block;
   height: 58px;
-  align-items: left;
+  align-items: flex-start;
   background-color: #fff;
   padding: 5px 15px 5px 15px;
   border-radius: 15px;

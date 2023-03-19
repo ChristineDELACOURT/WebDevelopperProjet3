@@ -168,7 +168,7 @@ ul img{
 .carte-restaurants img{
     box-sizing:border-box;
     width:100%;
-    aspect-ratio: 2;
+    aspect-ratio:2;
     border: 5px white solid;
     border-top-right-radius:20px;
     border-top-left-radius: 20px;
@@ -306,7 +306,7 @@ ul img{
     justify-content:space-around;
     display:block;
     height: 58px;
-    align-items: left;
+    align-items:flex-start;
     background-color:$blanc;
     padding: 5px 15px 5px 15px;
     border-radius:15px;
