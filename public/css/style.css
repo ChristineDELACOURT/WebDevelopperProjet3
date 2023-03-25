@@ -118,29 +118,61 @@ li h4 {
   border: none;
 }
 
-.btn {
+.btn--1 {
   color: #000;
   font-family: "Roboto";
   font-style: normal;
   text-align: center;
-  vertical-align: middle;
-  margin: 15px 15%;
+  display: block;
+  justify-items: center;
   font-weight: 700;
   font-size: 20px;
   line-height: 45px;
   height: 52px;
   color: white;
-  background-color: #FF79DA;
-  background-color: #9356DC;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   border: none;
   border-radius: 20px;
   box-shadow: 0 3px 15px 0 #9356DC;
   transition: 0.3s;
 }
-.btn:hover {
+.btn--1:hover {
   background: linear-gradient(to bottom right, #ff9de4, #a674e2);
   box-shadow: 0 6px 15px 0 #9356DC;
+}
+.btn--1 {
+  margin: 15px 30%;
+}
+.btn--2 {
+  margin: 15px 15%;
+}
+.btn--2 {
+  color: #000;
+  font-family: "Roboto";
+  font-style: normal;
+  text-align: center;
+  display: block;
+  justify-items: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 45px;
+  height: 52px;
+  color: white;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 3px 15px 0 #9356DC;
+  transition: 0.3s;
+}
+.btn--2:hover {
+  background: linear-gradient(to bottom right, #ff9de4, #a674e2);
+  box-shadow: 0 6px 15px 0 #9356DC;
+}
+.btn--1 {
+  margin: 15px 30%;
+}
+.btn--2 {
+  margin: 15px 15%;
 }
 
 header {
@@ -181,6 +213,27 @@ header img {
   }
   100% {
     transform: translateY(0);
+  }
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+  width: 100%;
+  gap: 20px;
+  animation: apparition 0s 2800ms forwards;
+}
+
+@keyframes apparition {
+  0% {
+    transform: scaleX(0);
+  }
+  99% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
   }
 }
 .conteneur-main-details {
@@ -248,11 +301,11 @@ header img {
   gap: 20px;
   flex-direction: row;
   position: absolute;
-  top: 0;
+  top: -60px;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 0;
+  z-index: 2;
   animation: disparition 0s 2800ms forwards;
 }
 
@@ -531,6 +584,10 @@ header img {
   .fonctionnement ul li {
     width: 30%;
   }
+}
+.fonctionnement ul li:hover {
+  background: white;
+  box-shadow: 0 6px 15px 0 gray;
 }
 
 ul img {

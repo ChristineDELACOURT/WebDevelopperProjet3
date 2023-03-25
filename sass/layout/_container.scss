@@ -22,6 +22,21 @@
         transform:translateY(0);
     }
 }
+main{
+    @include flexbox;
+    animation:apparition 0s 2800ms forwards;
+}
+@keyframes apparition{
+    0% {
+        transform:scaleX(0);
+    }
+    99%{
+        transform:scaleX(0);
+    }
+    100% {
+        transform:scaleX(1);
+    }
+}
 .conteneur-main-details{
     max-width:768px; /* largeur maximale d un mobile */
     position:absolute;

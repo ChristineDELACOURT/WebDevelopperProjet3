@@ -1,15 +1,15 @@
 .btn {
+    @for $i from 1 through 2 {
+        &--#{$i} {
     @include police-Roboto;
-    vertical-align:middle;
-    margin: 15px 15%;
+    display:block;
+    justify-items: center;
     font-weight: 700;
     font-size: 20px;
     line-height:45px;
     height:52px;
     color:white; 
-    background-color:$rose ;
-    background-color:$violet;
-    background: linear-gradient(to bottom right,#FF79DA, #9356DC);
+    background: linear-gradient(to bottom right,$rose, $violet);
     border:none;
     border-radius: 20px;
     box-shadow: 0 3px 15px 0 #9356DC;
@@ -17,5 +17,13 @@
     &:hover{
         background: linear-gradient(to bottom right,lighten(#FF79DA,7%),lighten(#9356DC,7%));
         box-shadow: 0 6px 15px 0 #9356DC;
+        }
+        }
+    &--1{
+        margin: 15px 30%;
+    }
+    &--2{
+        margin: 15px 15%;
+    }   
     }
 }
