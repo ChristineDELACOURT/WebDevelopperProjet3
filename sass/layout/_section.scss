@@ -302,28 +302,17 @@ ul .chiffre{
     top:0;
     left:0; 
     z-index:2;      
-    &:hover{
+    &:hover,&:active{
         background:linear-gradient(#9356DC,#FF79DA);
         background-clip: text;
         color:transparent;
         font-weight: 600;
         z-index:1;
         }
-    &:hover + .carre{
+        &:hover,&:active + .carre{
         z-index:2;
         transform:scaleY(0);
         }  
-    &:active{
-        background:linear-gradient(#9356DC,#FF79DA);
-        background-clip: text;
-        color:transparent;
-        font-weight: 600;
-        z-index:1;
-        }
-    &:active + .carre{
-        z-index:2;
-        transform:scaleY(0);
-        }        
         }
 .carte-menu {
     @include flexbox;
@@ -421,11 +410,14 @@ ul .chiffre{
     &:hover .blockprix{
         transform:translate(-80px);
     }
-    &:hover .texte{
+/*    &:hover .texte{
         width:calc(100% - 65px);
     }
     &:hover h4{
         width:calc(100% - 65px);
+    }*/
+    &:hover .blocktexte{
+        width:calc(80% - 65px);
     }
     &:hover .fa-check{
         transform:rotate(-360deg);
@@ -452,6 +444,12 @@ ul .chiffre{
     width:80%;
     height:80px;
     justify-content:space-around;
+    white-space:nowrap;
+    position:relative;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    transform-origin:right;
+    transition:width 1000ms ease-in-out;
 }
 .blocktexte h4{
     display:inline-block;

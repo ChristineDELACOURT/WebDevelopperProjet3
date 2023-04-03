@@ -856,25 +856,14 @@ ul .chiffre {
   left: 0;
   z-index: 2;
 }
-.fa-regular:hover, .fa-heart:hover {
+.fa-regular:hover, .fa-regular:active, .fa-heart:hover, .fa-heart:active {
   background: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
   color: transparent;
   font-weight: 600;
   z-index: 1;
 }
-.fa-regular:hover + .carre, .fa-heart:hover + .carre {
-  z-index: 2;
-  transform: scaleY(0);
-}
-.fa-regular:active, .fa-heart:active {
-  background: linear-gradient(#9356DC, #FF79DA);
-  background-clip: text;
-  color: transparent;
-  font-weight: 600;
-  z-index: 1;
-}
-.fa-regular:active + .carre, .fa-heart:active + .carre {
+.fa-regular:hover, .fa-regular:active + .carre, .fa-heart:hover, .fa-heart:active + .carre {
   z-index: 2;
   transform: scaleY(0);
 }
@@ -1020,15 +1009,18 @@ ul .chiffre {
   box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
   border-radius: 15.0431px;
   transition: box-shadow 0.3s;
+  /*    &:hover .texte{
+          width:calc(100% - 65px);
+      }
+      &:hover h4{
+          width:calc(100% - 65px);
+      }*/
 }
 .liste-entrees li:hover .blockprix {
   transform: translate(-80px);
 }
-.liste-entrees li:hover .texte {
-  width: calc(100% - 65px);
-}
-.liste-entrees li:hover h4 {
-  width: calc(100% - 65px);
+.liste-entrees li:hover .blocktexte {
+  width: calc(80% - 65px);
 }
 .liste-entrees li:hover .fa-check {
   transform: rotate(-360deg);
@@ -1110,6 +1102,12 @@ ul .chiffre {
   width: 80%;
   height: 80px;
   justify-content: space-around;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform-origin: right;
+  transition: width 1000ms ease-in-out;
 }
 
 .blocktexte h4 {
