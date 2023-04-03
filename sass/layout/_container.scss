@@ -4,14 +4,15 @@
         top:0;
         bottom: 0;
         left:0;
-        right: 0;
-        padding:0 3.75vw;
+        right: 0;   
     z-index:1;
-    animation:apparition 0s 2800ms backwards;
+    animation:apparition 0s 2ms backwards;
     @include tablette{
         max-width:100%; 
+        padding:0 3.75vw;
     }@include desktop{
         max-width:100%; 
+        padding:0 3.75vw;
     }   
 }
 @keyframes apparition{
@@ -25,6 +26,8 @@
 main{
     @include flexbox;
     animation:apparition 0s 2800ms forwards;
+    background-color:$gris-tres-clair;
+    gap:0;
 }
 @keyframes apparition{
     0% {
@@ -41,12 +44,14 @@ main{
     max-width:768px; /* largeur maximale d un mobile */
     position:absolute;
             top:0;
-            bottom: 0;
+            bottom:0;
             left:0;
             right: 0;
-            padding:0 3.75vw;
+            padding:0;
+            background: #F7F7F7;
     @include tablette{
         max-width:100%; 
+        padding:0 3.75vw;
     }@include desktop{
         max-width:100%; 
     }   

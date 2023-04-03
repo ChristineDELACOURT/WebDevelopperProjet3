@@ -1,12 +1,17 @@
 h1{
-    @include police-Roboto;
-    font-weight:700;
-    font-size: 24px;
-    line-height: 26px;
-    margin: 15px 18%;
+    font-family:'Roboto';
+    font-style:bold;
+    text-align: center;
+    height:117.5px;
+    font-weight:800;
+    font-size: 29px;
+    line-height:29px;
+    padding:39.5px 0 10px 0;
 }
 h2{
-    @include police-Roboto;
+    font-family:'Roboto';
+    font-style:bold;
+    text-align: center;
     vertical-align:middle;
     margin: 15px 15%;
     font-weight: 700;
@@ -17,42 +22,57 @@ h2{
     background-color:#FF79DA ;
     background-color:#9356DC;
     background: linear-gradient(to bottom right,#FF79DA, #9356DC);
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
     border-left:none;
-    border-radius: 20px;
+    border-radius:25px;
     box-shadow: 0 3px 15px 0 #9356DC;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     transition: 0.3s;
 }
 h3{
-    @include police-Roboto;
+    font-family:'Roboto';
+    font-style:normal;
+    text-align: center;
     color:gray;
-    font-weight:400;
-    font-size:18px;
+    font-weight:300;
+    font-size:22px;
     line-height:21px;
-    vertical-align:middle;
-    margin: 15px 5%;
+    margin-bottom:35px
 }
 h4{
-    @include police-Roboto;
-    font-weight:700;
-    font-size:16px;
-    line-height:24px;
-    top: 5px;
+    font-family: 'Roboto'; 
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 21px;
+    color: #000000;
+}
+h5{
+    font-family: 'Roboto'; 
+    font-style: normal;
+    color: #008766;
+    font-weight:600;
+    font-size: 18px;
+    line-height: 16px;
+    text-align: center;
 }
 .texte{
-    @include police-Roboto;
-    text-align: left;
-    font-weight:400;
-    font-size:14px;
+    font-family: 'Roboto';
+    font-style:normal;
+    font-weight:lighter;
+    font-size:20px;
     line-height:20px;
-    padding-top:3px;
+    padding-top:15px;
+    color: #000000;
 }
-.nom-restaurant h3{
+.nom-restaurant h1{
     color:$noir;
     text-align: left;
-    font-size:24px;
+    font-size:36px;
+    font-weight: 400;
     font-family:'Shrikhand';
     margin-left: 0;
-    margin-right: 0;border: none;
+    margin-right: 0;
+    border: none;
 }
 li h4 {
     color: $noir;

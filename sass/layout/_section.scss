@@ -7,7 +7,7 @@ position:absolute;
             left:0;
             right: 0;
             z-index:2;
-            animation:disparition 0s 2800ms forwards;
+            animation:disparition 0s 2ms forwards;
 }
 @keyframes disparition{
     0% {
@@ -52,13 +52,18 @@ position:absolute;
 }
 .fonctionnement{
     @include flexbox;
-    margin-top:20px;
+    height:560px;
+    padding-left:30px;
+    padding-right:30px;
+    padding-bottom: 120px;
+    background: #FFFFFF;
     @include desktop{
         aspect-ratio:unset;
     }
     & h1{
-    text-align: left;
-    margin:0;
+    text-align:left;
+    padding-top: 100px;
+    padding-bottom: 50px;
     @include tablette{
         text-align: center;
     }  
@@ -70,9 +75,10 @@ position:absolute;
 .fonctionnement ul{
     list-style:none;
     @include flexbox;
-    margin: 8px;
     justify-items: center;
     align-items: center;
+    width:100%;
+    gap:35px;
     @include tablette{
         flex-direction:row; 
         justify-content: space-between;
@@ -84,14 +90,16 @@ position:absolute;
 }
 .fonctionnement ul li {
     display:block;
+    width:100%;
+    height:90px;
     justify-items:center;
     align-items: center;
-    @include police-Roboto;
+    font-family:'Roboto';
+    font-style:normal;
     text-align: left;
-    font-weight:700;
-    font-size:17px;
+    font-weight:600;
+    font-size:19px;
     line-height:21px;
-    width:98%;
     @include tablette{
         width:32%;
         font-size:15px;
@@ -99,30 +107,60 @@ position:absolute;
     @include desktop{
         width:30%;
     }
-    background-color:#F2F2F2;
+    background-color:#F7F7F7;;
     border-radius:20px;
-    box-shadow: 0 3px 5px 0 gray;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     transition: 0.3s;
     &:hover{
-        background: lighten(#F2F2F2,7%);
-        box-shadow: 0 6px 15px 0 gray;
+        background: lighten(#F7F7F7,7%);
+        box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.15);
+    }
+    &:hover .fa-mobile-screen-button,&:hover .fa-list,&:hover .fa-store{  
+        color:$violet;
     }
 }
 ul img{
     display:inline;
     vertical-align: middle;
     position:relative;
-    left:-10px;
-    width:20px;
-    height:20px;
+    left:-15px;
+    width:30px;
+    height:30px;
 }
-.fa-mobile,.fa-list,.fa-store{   
+ul text{
+    display:inline-block;
+    font-family:'Roboto';
+    font-style: bold;
+    font-weight: 500;
+    font-size:18px;
+    line-height: 17px;
+    background-color: $violet;
+    color: #FFFFFF;
+    position:relative;
+    left:-15px;
+    width:30px;
+    height:30px;
+    padding:7px 10px;
+    border-radius:15px;
+    align-items: center;
+}
+ul .chiffre{
+    left:-15px;
+    width:30px;
+    height:30px;
+    color:$blanc;
+    background-color:$violet;
+}
+.fa-mobile-screen-button,.fa-list,.fa-store{   
     width:52px;
-    height:52px;
+    height:90px;
     text-align:center;
     vertical-align:middle;
-    padding:15px;
+    padding:34px 15px 34px 15px;
     color:$gris;
+    &:hover{
+        color:$violet;
+    }
     @include tablette{
         width:22px;
         position:relative;
@@ -133,9 +171,10 @@ ul img{
 .restaurants{
     @include flexbox;
     border-radius:20px;
-    background-color:#F2F2F2;
-    gap:30px;
-    margin-top: 20px;
+    height:1500px;
+    gap:25px;
+    padding-left:30px;
+    padding-right:30px;
     padding-bottom: 30px;
     @include desktop{
         flex-direction:row; 
@@ -149,13 +188,25 @@ ul img{
         aspect-ratio:unset;
     } 
     & h1{
-        width:100%;
-        text-align: left;
-        margin:20px 0 0 0;
-    } 
+        text-align:left;
+        height: 217.5px;
+        padding-top: 100px;
+        @include tablette{
+            text-align: center;
+        }  
+        @include desktop{
+            text-align: center;
+        }  
+    }
 }
 .carte-restaurants{
     @include flexbox;
+    display:inline-block;
+    justify-content:space-between;
+    width:100%;
+    height:auto;
+    position:relative;
+    aspect-ratio:8/6;
     background-color:white;
     border-radius:20px;
     box-shadow: 0 3px 15px 0 rgba(0,0,0,0.1);
@@ -173,59 +224,85 @@ ul img{
     box-sizing:border-box;
     width:100%;
     aspect-ratio:2/1;
-    border: 5px white solid;
     border-top-right-radius:20px;
-    border-top-left-radius: 20px;
+    border-top-left-radius:20px;
     object-fit:cover;
 }
+.badge{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    vertical-align: middle;
+    width:106px;
+    height:39px;
+    left:calc(100% - 116px);
+    top:15px;
+    background: #99E2D0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+}
 .texte-carte-restaurants{
-    display: flex;
-    flex-direction: row;
+    display:flex;
+    flex-direction:row;
     width:100%;
     justify-content:space-between;
-    padding:0px 16px;
-    font-size:12px;
+    padding:16px;
+    position:relative;
 }
 .coeur{
-    width:20px; 
-    height:20px; 
+    width:30px; 
+    height:30px; 
     z-index:0;
 }
 .carre{
     background-color:$blanc;
-    width:22px; 
-    height:20px; 
+    width:32px; 
+    height:32px; 
     position:relative;
-    top:-20px;
+    top:-30px;
     left:-1px;
     z-index:0;
     transform:scaleY(1);
     transform-origin:top;
-    transition:transform 3000ms ease-in-out;
+    transition:transform 1000ms ease-in-out;
 }
-.nom-restaurant .coeur .carre{
-    background-color:#F2F2F2;
-    top:-20px;
+.nom-restaurant .carre{
+    background-color: #F7F7F7;
 }
 .fa-regular,.fa-heart{
     display:block;
-    font-size:20px;
+    font-size:30px;
     color:gray;  
-    width:20px; 
-    height:20px; 
+    background:none;
+    width:30px; 
+    height:30px; 
     position:relative;
     top:0;
     left:0; 
     z-index:2;      
-    &:active,&:hover{
-            color:$rouge;   
-            font-weight:bolder; 
-            z-index:1;
-            }
-    &:active,&:hover + .carre{
-            z-index:2;
-            transform:scaleY(0);
-            }        
+    &:hover{
+        background:linear-gradient(#9356DC,#FF79DA);
+        background-clip: text;
+        color:transparent;
+        font-weight: 600;
+        z-index:1;
+        }
+    &:active{
+        background:linear-gradient(#9356DC,#FF79DA);
+        background-clip: text;
+        color:transparent;
+        font-weight: 600;
+        z-index:1;
+        }
+    &:hover + .carre{
+        z-index:2;
+        transform:scaleY(0);
+        }  
+    &:active + .carre{
+        z-index:2;
+        transform:scaleY(0);
+        }        
         }
 .fa-arrow-left{
     width:auto;
@@ -235,8 +312,7 @@ ul img{
 }
 .carte-menu {
     @include flexbox;
-    background-color: #F2F2F2;
-    margin-top: 20px;
+    background-color: #F7F7F7;
 }
 .restaurant{
     @include flexbox;
@@ -246,7 +322,7 @@ ul img{
 }
 .restaurant img {
     width:100%;
-    max-height:200px;
+    aspect-ratio:1.45;
     padding:0px 0px 0px 0px;
     object-fit:cover;
 }
@@ -258,7 +334,7 @@ ul img{
     gap:30%;
     position: relative;
     top: -50px;
-    background-color: #F2F2F2;
+    background-color: #F7F7F7;
     border-top-right-radius:50px;
     border-top-left-radius: 50px;
 }
@@ -292,7 +368,7 @@ ul img{
     color:$gris;
     align-self: self-start; 
     font-weight: 400;
-    border-bottom: 3px solid $cyan;
+    border-bottom: 3px solid $bleuturquoise;
     width : 40px;  
 }
 .menu ul{
@@ -309,7 +385,7 @@ ul img{
     overflow: hidden;
     justify-content:space-around;
     display:block;
-    height: 58px;
+    height:90px;
     align-items:flex-start;
     background-color:$blanc;
     padding: 5px 15px 5px 15px;
@@ -317,9 +393,12 @@ ul img{
     box-shadow: 0 3px 5px 0 gray;
     transition:box-shadow 0.3s;   
     &:hover .blockprix{
-        transform:translate(-60px);
+        transform:translate(-80px);
     }
     &:hover .texte{
+        width:calc(100% - 100px);
+    }
+    &:hover h4{
         width:calc(100% - 100px);
     }
     &:hover .fa-check{
@@ -334,13 +413,45 @@ ul img{
         justify-content:flex-start;
         width:100%;
         flex-wrap:nowrap;
-        height:24px;
-        gap:0px;
+        height:90px;
         color:$blanc;    
         animation:delai 330ms backwards ease-in-out 1;
-        animation-delay: 1000ms * $i;
+        animation-delay: 330ms * $i;
         }
     }
+}
+.blocktexte{
+    @include flexbox;
+    gap:0;
+    width:80%;
+    height:80px;
+    justify-content:space-around;
+}
+.blocktexte h4{
+    display:block;
+    padding-top:15px;
+    height:45px;
+    white-space:nowrap;
+    position:relative;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    transform-origin:right;
+    transition:width 1000ms ease-in-out;
+}
+.blocktexte .texte{
+    display:block;
+    color: $noir;
+    font-size:18px;
+    line-height: 18px;
+    padding:0 0 10px 0;
+    font-weight:500;
+    position:relative;
+    text-align:left;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    transform-origin:right;
+    transition:width 1000ms ease-in-out;
 }
 /* apparition progressive du menu */
 @keyframes delai{
@@ -356,54 +467,47 @@ ul img{
         transform:translateY(0%);
     }
 }
-.prix{
-    width: 100%;
-    height: 24px;
-}
 .blockprix{
     @include flexbox;
     flex-direction:row;
-    justify-content:flex-start;
+    justify-content:space-between;
     position:relative;
-    top:-55px;
-    right:calc(25px - 100%);
-    width:100px;
-    height:60px;
-    gap:0px;
+    top:-85px;
+    left:calc(100% - 45px);
+    width:140px;
+    height:90px;
+    gap:20px;
     font-size:unset;
     transform:translate(0);
     transform-origin:right;
-    transition:transform 3000ms ease-in-out;
+    transition:transform 1000ms ease-in-out;
 }
-.liste-entrees li .texte{
-    color: $noir;
-    font-size:16px;
-    font-weight:500;
+.blockprix h4{
+    padding-top:50px;
+}
+.prix{
+    width:50px;
     height:24px;
-    width:calc(100% - 40px);
-    position:relative;
-    text-align: left;
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    transform-origin:right;
-    transition:width 3000ms ease-in-out;
 }
 .coche{
+    display:flex;
+    justify-content:center;
     display:block;
-    background-color:$cyan;
-    width:60px;
-    height:60px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+    background-color:$bleuturquoise;
+    width:90px;
+    height:90px;
+    border-top-right-radius:15px;
+    border-bottom-right-radius:15px;
 }
 .fa-check{
-    margin:20px;
-    width: 20px;
-    height: 20px;
-    color:$cyan;
-    border-radius: 15px;
+    display:block;
+    justify-items: center;
+    align-items: center;
+    margin:30px;
+    padding:5px;
+    color:$bleuturquoise;
+    border-radius:15px;
     background-color:$blanc;
     transform:rotate(0deg);
-    transition:transform 3000ms ease-in-out;
+    transition:transform 1000ms ease-in-out;
 }

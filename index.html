@@ -5,6 +5,9 @@ Christine Delacourt 14/02/2023 -->
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&family=FontAwesome&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./public/css/prefixed/style.css">
 <script src="https://kit.fontawesome.com/852a711ee8.js" crossorigin="anonymous"></script>
 <title>Ohmyfood</title>
@@ -28,9 +31,7 @@ Christine Delacourt 14/02/2023 -->
         <main>   
             <div class="ville">
                 <i class="fa-solid fa-location-dot"></i>
-                <form method="post"> 
-                    <input class="ville-input" type="text" name="ville" id="ville" value="Paris, Belleville" required/>
-                </form>
+                    <button class="ville-input" >Paris, Belleville</button>
             </div> <!--class="ville"-->
             <h1>Réservez le menu qui<br>vous convient</h1>
             <h3>Découvrez des restaurants d'exception,<br>sélectionnés par nos soins.</h3>
@@ -38,9 +39,9 @@ Christine Delacourt 14/02/2023 -->
             <section class="fonctionnement">
                 <h1>Fonctionnement</h1>
                 <ul class="liste-fonctionnement">
-                    <li><img src="./public/images/chiffre1.jpg" alt="chiffre 1"/><i class="fa-solid fa-mobile"></i>Choisissez un restaurant</li>
-                    <li><img src="./public/images/chiffre2.jpg" alt="chiffre 2"/><i class="fa-solid fa-list"></i>Composez votre menu</li>
-                    <li><img src="./public/images/chiffre3.jpg" alt="chiffre 3"/><i class="fa-solid fa-store"></i>Dégustez au restaurant</li>
+                    <li><text>1</text><i class="fa-solid fa-mobile-screen-button"></i>Choisissez un restaurant</li>
+                    <li><text>2</text><i class="fa-solid fa-list"></i>Composez votre menu</li>
+                    <li><text>3</text><i class="fa-solid fa-store"></i>Dégustez au restaurant</li>
                 </ul>
             </section>
                 <section class="restaurants">
@@ -48,6 +49,9 @@ Christine Delacourt 14/02/2023 -->
                     <div class="carte-restaurants">
                         <a href="./palette.html">
                             <img src="./public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo du restaurant"/>
+                            <div class="badge">
+                            <h5>Nouveau</h5>
+                        </div>
                         </a>    
                             <div class="texte-carte-restaurants">
                                 <a href="./palette.html">
@@ -56,16 +60,19 @@ Christine Delacourt 14/02/2023 -->
                                 <div class="texte">Ménilmontant
                                 </div>  <!--class="texte"-->
                                 </div> <!--class="texte-carte-restaurants-gauche"--> 
-                            </a>    
-                                <div class="coeur">
-                                    <i class="fa-regular fa-heart"></i>  
-                                    <div class="carre"></div> 
-                                </div> <!--class="coeur"-->
+                            </a>     
+                            <div class="coeur">
+                                <i class="fa-regular fa-heart"></i>
+                                <div class="carre"></div>
+                            </div> <!--class="coeur"-->  
                             </div> <!--class="texte-carte-restaurants"-->
                     </div> <!--class="carte-restaurants"-->
                     <div class="carte-restaurants">
                         <a href="./note.html">
                             <img src="./public/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="photo du restaurant"/>
+                            <div class="badge">
+                                <h5>Nouveau</h5>
+                            </div>
                         </a>
                             <div class="texte-carte-restaurants">
                                 <a href="./note.html">
@@ -75,10 +82,10 @@ Christine Delacourt 14/02/2023 -->
                                 </div>  <!--class="texte"-->
                                 </div> <!--class="texte-carte-restaurants-gauche"-->
                                 </a>
-                            <div class="coeur">
-                                <i class="fa-regular fa-heart"></i>  
-                                <div class="carre"></div> 
-                            </div> <!--class="coeur"-->
+                                <div class="coeur">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <div class="carre"></div>
+                                </div> <!--class="coeur"-->  
                             </div> <!--class="texte-carte-restaurants"-->   
                     </div> <!--class="carte-restaurants"-->
                     <div class="carte-restaurants">
@@ -93,10 +100,10 @@ Christine Delacourt 14/02/2023 -->
                                 </div>  <!--class="texte"-->
                                 </div> <!--class="texte-carte-restaurants-gauche"-->
                                 </a>
-                            <div class="coeur">
-                                <i class="fa-regular fa-heart"></i>  
-                                <div class="carre"></div> 
-                            </div> <!--class="coeur"-->
+                                <div class="coeur">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <div class="carre"></div>
+                                </div> <!--class="coeur"-->  
                             </div> <!--class="texte-carte-restaurants"-->
                     </div> <!--class="carte-restaurants"-->
                     <div class="carte-restaurants">
@@ -111,16 +118,16 @@ Christine Delacourt 14/02/2023 -->
                                 </div>  <!--class="texte"-->   
                                 </div> <!--class="texte-carte-restaurants-gauche"-->
                                 </a>        
-                            <div class="coeur">
-                                <i class="fa-regular fa-heart"></i>  
-                                <div class="carre"></div> 
-                            </div> <!--class="coeur"-->
+                                <div class="coeur">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <div class="carre"></div>
+                                </div> <!--class="coeur"-->  
                         </div> <!--class="texte-carte-restaurants"-->  
                     </div> <!--class="carte-restaurants"-->                   
                 </section> 
         </main>
         <footer>
-            <h3>Ohmyfood</h3>
+            <h3>ohmyfood</h3>
             <nav class="container-footer">
                 <a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a>
                 <a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a>
