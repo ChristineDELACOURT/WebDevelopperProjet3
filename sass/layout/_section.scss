@@ -309,6 +309,10 @@ ul .chiffre{
         font-weight: 600;
         z-index:1;
         }
+    &:hover + .carre{
+        z-index:2;
+        transform:scaleY(0);
+        }  
     &:active{
         background:linear-gradient(#9356DC,#FF79DA);
         background-clip: text;
@@ -316,10 +320,6 @@ ul .chiffre{
         font-weight: 600;
         z-index:1;
         }
-    &:hover + .carre{
-        z-index:2;
-        transform:scaleY(0);
-        }  
     &:active + .carre{
         z-index:2;
         transform:scaleY(0);
@@ -422,10 +422,10 @@ ul .chiffre{
         transform:translate(-80px);
     }
     &:hover .texte{
-        width:calc(100% - 100px);
+        width:calc(100% - 65px);
     }
     &:hover h4{
-        width:calc(100% - 100px);
+        width:calc(100% - 65px);
     }
     &:hover .fa-check{
         transform:rotate(-360deg);
@@ -454,7 +454,7 @@ ul .chiffre{
     justify-content:space-around;
 }
 .blocktexte h4{
-    display:block;
+    display:inline-block;
     padding-top:15px;
     height:45px;
     white-space:nowrap;
@@ -465,7 +465,7 @@ ul .chiffre{
     transition:width 1000ms ease-in-out;
 }
 .blocktexte .texte{
-    display:block;
+    display:inline-block;
     color: $noir;
     font-size:18px;
     line-height: 18px;
