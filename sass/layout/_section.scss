@@ -125,7 +125,7 @@ position:absolute;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     transition: 0.3s;
     &:hover{
-        background: lighten(#F7F7F7,7%);
+        background:darken(#F7F7F7,3%);
         box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.15);
     }
     &:hover .fa-mobile-screen-button,&:hover .fa-list,&:hover .fa-store{  

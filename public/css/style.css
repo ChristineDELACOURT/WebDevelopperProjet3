@@ -640,7 +640,7 @@ main {
   }
 }
 .fonctionnement ul li:hover {
-  background: white;
+  background: #efefef;
   box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.15);
 }
 .fonctionnement ul li:hover .fa-mobile-screen-button, .fonctionnement ul li:hover .fa-list, .fonctionnement ul li:hover .fa-store {
