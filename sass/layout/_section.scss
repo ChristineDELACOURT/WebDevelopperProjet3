@@ -7,7 +7,7 @@ position:absolute;
             left:0;
             right: 0;
             z-index:2;
-            animation:disparition 0s 2ms forwards;
+            animation:disparition 0s 1000ms forwards;
 }
 @keyframes disparition{
     0% {
@@ -34,8 +34,8 @@ position:absolute;
             top:47.5vh * $i - (4.75vh * $i * $i) - 33.25vh;
             left:9.90625vw * $i - (0.015625vw * $i * $i) - 4.890625vw;       
 /*            animation: spin 1000ms backwards infinite ease-in-out alternate;*/
-            animation: spin 300ms backwards ease-in-out 1;
-            animation-delay: 300ms * ($i - 1);
+            animation: spin 100ms backwards ease-in-out 1;
+            animation-delay: 100ms * ($i - 1);
             background-color:nth($color_,$i);
         }
     }
@@ -52,13 +52,22 @@ position:absolute;
 }
 .fonctionnement{
     @include flexbox;
-    height:560px;
+    height:auto;
     padding-left:30px;
     padding-right:30px;
     padding-bottom: 120px;
     background: #FFFFFF;
     @include desktop{
         aspect-ratio:unset;
+        padding-left:10px;
+        padding-right:10px;
+        padding-bottom:80px;
+    }
+    @include tablette{
+        aspect-ratio:unset;
+        padding-left:10px;
+        padding-right:10px;
+        padding-bottom:80px;
     }
     & h1{
     text-align:left;
@@ -66,9 +75,11 @@ position:absolute;
     padding-bottom: 50px;
     @include tablette{
         text-align: center;
+        height:auto;
     }  
     @include desktop{
         text-align: center;
+        height:auto;
     }  
     }
 }
@@ -82,10 +93,12 @@ position:absolute;
     @include tablette{
         flex-direction:row; 
         justify-content: space-between;
+        gap:0;
     }  
     @include desktop{
         flex-direction:row; 
-        justify-content: space-between;
+        justify-content:space-between;
+        gap:0;
     }  
 }
 .fonctionnement ul li {
@@ -162,16 +175,22 @@ ul .chiffre{
         color:$violet;
     }
     @include tablette{
-        width:22px;
+        width:15px;
         position:relative;
         left:-10px;
-        padding:15px 0px 15px 0px;
+        padding:34px 0px 34px 0px;
+    }
+    @include desktop{
+        width:15px;
+        position:relative;
+        left:-10px;
+        padding:34px 2vw 34px 1vw;
     }
 }
 .restaurants{
     @include flexbox;
     border-radius:20px;
-    height:1500px;
+    height:auto;
     gap:25px;
     padding-left:30px;
     padding-right:30px;
@@ -192,9 +211,11 @@ ul .chiffre{
         height: 217.5px;
         padding-top: 100px;
         @include tablette{
+            width: 98%;
             text-align: center;
         }  
         @include desktop{
+            width: 98%;
             text-align: center;
         }  
     }
@@ -304,12 +325,6 @@ ul .chiffre{
         transform:scaleY(0);
         }        
         }
-.fa-arrow-left{
-    width:auto;
-    color:$noir;
-    transform:scale(1.414);
-    padding: 20px 0 0 0;
-}
 .carte-menu {
     @include flexbox;
     background-color: #F7F7F7;
@@ -325,13 +340,19 @@ ul .chiffre{
     aspect-ratio:1.45;
     padding:0px 0px 0px 0px;
     object-fit:cover;
+    @include desktop{
+    aspect-ratio:4.06;
+       
+    }
+    @include tablette{
+        
+    }   
 }
 .nom-restaurant{
     @include flexbox;
     flex-direction: row;
     align-items: center;
     height: 100px;
-    gap:30%;
     position: relative;
     top: -50px;
     background-color: #F7F7F7;
@@ -343,7 +364,7 @@ ul .chiffre{
     padding:0 3% 0 3%;
     justify-content:center;
     align-items:flex-start;
-    gap:10px;
+    gap:40px;
     animation:delais 5s ease-in-out;
     @include tablette{
         flex-direction: row;
@@ -356,7 +377,6 @@ ul .chiffre{
 .menu{   
     width:100%;
     height:auto;
-    gap:10px;
     @include tablette{
         width:48%;
     }  
@@ -365,19 +385,25 @@ ul .chiffre{
     }  
 }
 .partie-repas{
-    color:$gris;
+    font-family: 'Roboto';
+    font-style: normal;
+    color:$noir;
+    font-weight:300;
+    font-size: 20px;
+    line-height: 19px;
+    text-transform: uppercase;
     align-self: self-start; 
-    font-weight: 400;
-    border-bottom: 3px solid $bleuturquoise;
-    width : 40px;  
+    padding-bottom: 10px;
+    border-bottom: 4px solid $bleuturquoise;
+    width : 50px;  
 }
 .menu ul{
     @include flexbox;   
-    gap:10px;
+    gap:20px;
 }
 .liste-entrees{
     @include flexbox;
-    margin-top:20px;
+    margin-top:15px;
 
 }
 .liste-entrees li {
@@ -385,12 +411,12 @@ ul .chiffre{
     overflow: hidden;
     justify-content:space-around;
     display:block;
-    height:90px;
+    height:80px;
     align-items:flex-start;
     background-color:$blanc;
     padding: 5px 15px 5px 15px;
-    border-radius:15px;
-    box-shadow: 0 3px 5px 0 gray;
+    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+    border-radius: 15.0431px;
     transition:box-shadow 0.3s;   
     &:hover .blockprix{
         transform:translate(-80px);

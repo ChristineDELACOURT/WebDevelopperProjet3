@@ -6,13 +6,11 @@
         left:0;
         right: 0;   
     z-index:1;
-    animation:apparition 0s 2ms backwards;
+    animation:apparition 0s 1000ms backwards;
     @include tablette{
         max-width:100%; 
-        padding:0 3.75vw;
     }@include desktop{
         max-width:100%; 
-        padding:0 3.75vw;
     }   
 }
 @keyframes apparition{
@@ -25,7 +23,7 @@
 }
 main{
     @include flexbox;
-    animation:apparition 0s 2800ms forwards;
+    animation:apparition 0s 1000ms forwards;
     background-color:$gris-tres-clair;
     gap:0;
 }
@@ -51,7 +49,6 @@ main{
             background: #F7F7F7;
     @include tablette{
         max-width:100%; 
-        padding:0 3.75vw;
     }@include desktop{
         max-width:100%; 
     }   
