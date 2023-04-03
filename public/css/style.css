@@ -23,7 +23,6 @@ body {
 
 h1 {
   font-family: "Roboto";
-  font-style: bold;
   text-align: center;
   height: 117.5px;
   font-weight: 800;
@@ -34,7 +33,6 @@ h1 {
 
 h2 {
   font-family: "Roboto";
-  font-style: bold;
   text-align: center;
   vertical-align: middle;
   margin: 15px 15%;
@@ -310,7 +308,7 @@ main {
 .fa-location-dot {
   width: 12px;
   height: 16px;
-  scale: 1.25;
+  transform: scale(1.25);
   color: #353535;
 }
 
@@ -323,7 +321,6 @@ main {
   color: #353535;
   text-align: left;
   border-style: none;
-  background-color: none;
 }
 
 .spinner {
@@ -659,7 +656,6 @@ ul img {
 ul text {
   display: inline-block;
   font-family: "Roboto";
-  font-style: bold;
   font-weight: 500;
   font-size: 18px;
   line-height: 17px;
@@ -903,13 +899,13 @@ ul .chiffre {
 
 .restaurant img {
   width: 100%;
-  aspect-ratio: 1.45;
+  aspect-ratio: 1.45/1;
   padding: 0px 0px 0px 0px;
   object-fit: cover;
 }
 @media screen and (min-width: 992px) {
   .restaurant img {
-    aspect-ratio: 4.06;
+    aspect-ratio: 4.06/1;
   }
 }
 .nom-restaurant {
