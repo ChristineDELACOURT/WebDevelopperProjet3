@@ -140,22 +140,6 @@ ul img{
     width:30px;
     height:30px;
 }
-ul text{
-    display:inline-block;
-    font-family:'Roboto';
-    font-weight: 500;
-    font-size:18px;
-    line-height: 17px;
-    background-color: $violet;
-    color: #FFFFFF;
-    position:relative;
-    left:-15px;
-    width:30px;
-    height:30px;
-    padding:7px 10px;
-    border-radius:15px;
-    align-items: center;
-}
 ul .chiffre{
     left:-15px;
     width:30px;
@@ -207,15 +191,21 @@ ul .chiffre{
     } 
     & h1{
         text-align:left;
+        font-size: 20px;
+        line-height:20px;
         height: 217.5px;
         padding-top: 100px;
         @include tablette{
             width: 98%;
             text-align: center;
+            font-size: 29px;
+            line-height:29px;
         }  
         @include desktop{
             width: 98%;
             text-align: center;
+            font-size: 29px;
+            line-height:29px;
         }  
     }
 }

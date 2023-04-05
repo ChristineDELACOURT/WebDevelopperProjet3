@@ -26,9 +26,21 @@ h1 {
   text-align: center;
   height: 117.5px;
   font-weight: 800;
-  font-size: 29px;
-  line-height: 29px;
+  font-size: 20px;
+  line-height: 20px;
   padding: 39.5px 0 10px 0;
+}
+@media screen and (min-width: 762px) and (max-width: 992px) {
+  h1 {
+    font-size: 29px;
+    line-height: 29px;
+  }
+}
+@media screen and (min-width: 992px) {
+  h1 {
+    font-size: 29px;
+    line-height: 29px;
+  }
 }
 
 h2 {
@@ -120,6 +132,23 @@ li h4 {
   text-align: center;
   padding-top: 32px;
   border: none;
+}
+
+h6 {
+  display: inline-block;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 17px;
+  background-color: #9356DC;
+  color: #FFFFFF;
+  position: relative;
+  left: -15px;
+  width: 30px;
+  height: 30px;
+  padding: 7px 10px;
+  border-radius: 15px;
+  align-items: center;
 }
 
 .btn--1 {
@@ -653,23 +682,6 @@ ul img {
   height: 30px;
 }
 
-ul text {
-  display: inline-block;
-  font-family: "Roboto";
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 17px;
-  background-color: #9356DC;
-  color: #FFFFFF;
-  position: relative;
-  left: -15px;
-  width: 30px;
-  height: 30px;
-  padding: 7px 10px;
-  border-radius: 15px;
-  align-items: center;
-}
-
 ul .chiffre {
   left: -15px;
   width: 30px;
@@ -737,6 +749,8 @@ ul .chiffre {
 }
 .restaurants h1 {
   text-align: left;
+  font-size: 20px;
+  line-height: 20px;
   height: 217.5px;
   padding-top: 100px;
 }
@@ -744,12 +758,16 @@ ul .chiffre {
   .restaurants h1 {
     width: 98%;
     text-align: center;
+    font-size: 29px;
+    line-height: 29px;
   }
 }
 @media screen and (min-width: 992px) {
   .restaurants h1 {
     width: 98%;
     text-align: center;
+    font-size: 29px;
+    line-height: 29px;
   }
 }
 
